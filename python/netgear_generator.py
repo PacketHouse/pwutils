@@ -2,7 +2,7 @@
 # Author: str3tch @ Vegas 2.0 | dc702
 # Description: Generates a list of passwords mirroring a Netgear algorithm,
 #              when supplied a list of adjectives and nouns
-# Example Usage: ./netgear_generator.py -f adj.txt -f noun.txt -o prefixes.txt
+# Example Usage: ./netgear_generator.py -f adj.txt -f noun.txt -z 0 -o prefixes.txt
 # Note: Actually appending the digits results in massive amounts of RAM usage.
 import argparse
 import logging

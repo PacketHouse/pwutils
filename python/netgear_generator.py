@@ -12,7 +12,7 @@ parser.add_argument('-f', '--wordlist', default=[],
                     action='append', help='wordlist file')
 parser.add_argument('-o', '--output_file', help='wordlist file')
 parser.add_argument('-x', '--min_len', type=int, default=4,
-                    help='--minimum word length')
+                    help='minimum word length')
 parser.add_argument('-y', '--max_len', type=int, default=6,
                     help='maximum word length')
 parser.add_argument('-z', '--digits', type=int, default=3,

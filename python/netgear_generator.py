@@ -8,9 +8,11 @@ import argparse
 import logging
 
 parser = argparse.ArgumentParser(description='Netgear password generator')
-parser.add_argument('-f', '--wordlist', default=[],
-                    action='append', help='wordlist file')
+parser.add_argument('-f', '--wordlist', default=[], action='append',
+                    help='wordlist file')
 parser.add_argument('-o', '--output_file', help='wordlist file')
+parser.add_argument('-t', '--title_case', action='store_true',
+                    help='use Title Case for passwords')
 parser.add_argument('-x', '--min_len', type=int, default=4,
                     help='minimum word length')
 parser.add_argument('-y', '--max_len', type=int, default=6,
@@ -45,13 +47,20 @@ def main():
             new_passwords = []
             logging.info(f'Processing {filename}...')
             for word in get_words_from_file(filename):
+                # Skip words that are too short
                 if len(word) < ARGS.min_len:
                     continue
 
+                # Skip words that are too long
                 if len(word) > ARGS.max_len:
                     continue
 
+                # Use Title Case if specified
+                if ARGS.title_case:
+                    word = word.title()
+
                 if passwords:
+                    # Append word to each password if passwords exist from previous file
                     for password in passwords:
                         new_passwords.append(password + word)
                 else:
@@ -63,7 +72,7 @@ def main():
             else:
                 logging.info(f'passwords: {len(passwords)}')
 
-    # Add trailing digits
+    # Add trailing digits if specified
     if passwords and ARGS.digits > 0:
         new_passwords = []
         for password in passwords:
@@ -73,6 +82,7 @@ def main():
         logging.info(f'passwords: {len(passwords)} -> {len(new_passwords)}')
         passwords = new_passwords
 
+    # Write passwords to file
     if ARGS.output_file:
         logging.info('Creating output file...')
         create_output_file(ARGS.output_file, passwords)

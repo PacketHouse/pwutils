@@ -1,0 +1,24 @@
+Boston, Massachusetts
+Washington, D.C.
+Montreal, Quebec
+New Rochelle, New York
+Aston, Pennsylvania
+Toronto, Ontario
+Chicago, Illinois
+Lansing, Michigan
+Indianapolis, Indiana
+Madison, Wisconsin
+Saint Paul, Minnesota
+Pittsburgh, Pennsylvania
+Atlanta, Georgia
+Austin, Texas
+Durham, North Carolina
+Houston, Texas
+Irvine, California
+San Diego, California
+Denver, Colorado
+Oakland, California
+Portland, Oregon
+Salt Lake City, Utah
+Seattle, Washington
+Las Vegas, Nevada

@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 # Author: str3tch @ Vegas 2.0 | dc702
-# Description: Generates a list of passwords mirroring a Netgear algorithm,
-#              when supplied a list of adjectives and nouns
-# Example Usage: ./netgear_generator.py -f adj.txt -f noun.txt -z 0 -o prefixes.txt
+# Description: Generates a list of passwords or password prefixes mirroring
+#              a Netgear algorithm
+# Example Usages:
+#     ./netgear_generator.py -w adj.txt -w noun.txt -z 0 -t -o title_prefixes
+#     ./netgear_generator.py --wordlist adj.txt --wordlist noun.txt -o passwords
 # Note: Actually appending the digits results in massive amounts of RAM usage.
 import argparse
 import logging
 
+# Command line arguments
 parser = argparse.ArgumentParser(description='Netgear password generator')
-parser.add_argument('-f', '--wordlist', default=[], action='append',
-                    help='wordlist file')
 parser.add_argument('-o', '--output_file', help='wordlist file')
 parser.add_argument('-t', '--title_case', action='store_true',
                     help='use Title Case for passwords')
+parser.add_argument('-w', '--wordlist', default=[], action='append',
+                    help='wordlist file')
 parser.add_argument('-x', '--min_len', type=int, default=4,
                     help='minimum word length')
 parser.add_argument('-y', '--max_len', type=int, default=6,
@@ -60,14 +63,16 @@ def main():
                     word = word.title()
 
                 if passwords:
-                    # Append word to each password if passwords exist from previous file
+                    # Append word to each password if passwords exist from
+                    # previous wordlist
                     for password in passwords:
                         new_passwords.append(password + word)
                 else:
                     new_passwords.append(word)
 
             if new_passwords:
-                logging.info(f'passwords: {len(passwords)} -> {len(new_passwords)}')
+                logging.info(f'passwords: {len(passwords)} -> '
+                             f'{len(new_passwords)}')
                 passwords = new_passwords
             else:
                 logging.info(f'passwords: {len(passwords)}')

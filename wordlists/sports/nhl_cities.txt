@@ -1,0 +1,32 @@
+Raleigh, North Carolina
+Columbus, Ohio
+Newark, New Jersey
+Elmont, New York
+Manhattan, New York
+Philadelphia, Pennsylvania
+Pittsburgh, Pennsylvania
+Washington, D.C.
+Boston, Massachusetts
+Buffalo, New York
+Detroit, Michigan
+Sunrise, Florida
+Montreal, Quebec
+Ottawa, Ontario
+Tampa, Florida
+Toronto, Ontario
+Chicago, Illinois
+Denver, Colorado
+Dallas, Texas
+Saint Paul, Minnesota
+Nashville, Tennessee
+St. Louis, Missouri
+Salt Lake City, Utah
+Winnipeg, Manitoba
+Anaheim, California
+Calgary, Alberta
+Edmonton, Alberta
+Los Angeles, California
+San Jose, California
+Seattle, Washington
+Vancouver, British Columbia
+Paradise, Nevada

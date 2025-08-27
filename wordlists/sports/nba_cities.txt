@@ -1,0 +1,30 @@
+Boston, Massachusetts
+Brooklyn, New York
+Manhattan, New York
+Philadelphia, Pennsylvania
+Toronto, Ontario
+Chicago, Illinois
+Cleveland, Ohio
+Detroit, Michigan
+Indianapolis, Indiana
+Milwaukee, Wisconsin
+Atlanta, Georgia
+Charlotte, North Carolina
+Miami, Florida
+Orlando, Florida
+Washington, D.C.
+Denver, Colorado
+Minneapolis, Minnesota
+Oklahoma City, Oklahoma
+Portland, Oregon
+Salt Lake City, Utah
+Golden State Warriors
+Inglewood, California
+Los Angeles, California
+Phoenix, Arizona
+Sacramento, California
+Dallas, Texas
+Houston, Texas
+Memphis, Tennessee
+New Orleans, Louisiana
+San Antonio, Texas
